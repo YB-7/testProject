@@ -60,6 +60,43 @@ public class StudentList implements StudentAccess {
 	@Override
 	public void analyze() {
 		// 영어과목의 최고점수, 수학과목의 최고점수, 두 과목의 최고점수를 받은 학생의 정보를 보여주기
+		int max = 0;
+		Student student = null;
+		for(Student st : students) {
+			if(st.getEngScore() > max) {
+				max = st.getEngScore();
+				student = st;
+			}
+		}
+		
+		System.out.println("영어 최고점수 학생 정보");
+		System.out.println(student.toString());
+		 
+		 max = 0;
+		 student = null;
+		 
+		 for(Student st : students) {
+				if(st.getMathScore() > max) {
+					max = st.getMathScore();
+					student = st;
+				}
+			}
+			
+		System.out.println("수학 최고점수 학생 정보");
+		System.out.println(student.toString());	
+		
+		 max = 0;
+		 student = null;
+		 
+		 for(Student st : students) {
+				if(st.getEngScore() + st.getMathScore() > max) {
+					max = st.getEngScore() + st.getMathScore();
+					student = st;
+				}
+			}
+			
+		System.out.println("최고 점수합 학생 정보");
+		System.out.println(student.toString());	 
 	}
 
 	public int searchForNum(int studentNum) {

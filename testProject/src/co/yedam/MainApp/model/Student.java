@@ -48,7 +48,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [학번: " + studentNum + ", 이름: " + name + ", 영어점수: " + engScore + ", 수학점수: "
+		return "[학번: " + studentNum + ", 이름: " + name + ", 영어점수: " + engScore + ", 수학점수: "
 				+ mathScore + "]";
 	}
 	
